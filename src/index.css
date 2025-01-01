@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.menu-soln-img {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0.01)
+    ),
+    url("/assets/solution-menu.jpg");
+  background-size: cover;
+  height: 95%;
+  width: 98%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  padding: 1.2rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.header-hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(183, 208, 255, 1),
+      rgba(0, 0, 0, 0.01)
+    ),
+    url("/assets/hero.jpg");
+
+  background-size: cover;
+  height: 95vh;
+  scale: 1;
+  border-radius: 8px;
+
+  /* Animations for header lessening when scrolling down */
+
+  animation: fade-in linear forwards;
+  animation-timeline: view();
+  animation-range: exit exit-crossing 20%;
+}
+
+@keyframes fade-in {
+  to {
+    scale: 0.9;
+    border-radius: 50px;
+  }
+}
+
+/* Video styles */
+.video-testimonial-text {
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  backdrop-filter: blur(50px);
+  border-radius: 15px;
+  position: absolute;
+  bottom: 1.8rem;
+  left: 3rem;
+  width: 35%;
+  height: 80%;
+}
+
+.video-icon {
+  position: absolute;
+  display: inline-block;
+  bottom: 4.1rem;
+  right: 3rem;
+}
+
+.play-icon {
+  stroke: #fff;
+  width: 4.8rem;
+  height: 4.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.video-testimonial:hover .play-icon {
+  transform: scale(1.2);
+}
+
+.video-testimonial-comment {
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: -0.01rem;
+  line-height: normal;
+}
+
+.video-testimonial-author {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.video-testimonial-author-position {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #ddd;
+}
+
+/* Style for Video MODAL and OVERLAYS */
+.video-player-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+#full-player {
+  width: 80%;
+  height: 70vh;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hide {
+  display: none !important;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(183, 208, 255, 0.803),
+      rgba(0, 0, 0, 0.01)
+    ),
+    url("/assets/CustomerService.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form-container {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(183, 208, 255, 1),
+    rgba(0, 0, 0, 0.01)
+  );
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
