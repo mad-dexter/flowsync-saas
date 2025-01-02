@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
 function SocialProof() {
   const videoOverLay = useRef(null);
@@ -24,7 +25,23 @@ function SocialProof() {
           What Our Users Say
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md border">
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md border"
+            variants={{
+              initial: {
+                opacity: 0,
+                scale: 0,
+              },
+              final: {
+                opacity: 1,
+                scale: 1,
+              },
+            }}
+            initial={"initial"}
+            whileInView={"final"}
+            transition={{ ease: "easeOut", duration: 1 }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <div className="flex justify-center">
               <img
                 src="/assets/Customer/Customer-1.jpg"
@@ -41,9 +58,25 @@ function SocialProof() {
             <p className="text-blue-600 font-semibold mt-2 text-xs">
               - John D., CEO
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border">
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md border"
+            variants={{
+              initial: {
+                opacity: 0,
+                scale: 0,
+              },
+              final: {
+                opacity: 1,
+                scale: 1,
+              },
+            }}
+            initial={"initial"}
+            whileInView={"final"}
+            transition={{ ease: "easeOut", duration: 1 }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <div className="flex justify-center">
               <img
                 src="/assets/Customer/Customer-2.jpg"
@@ -60,9 +93,25 @@ function SocialProof() {
             <p className="text-blue-600 font-semibold mt-2 text-xs">
               - Sarah K., Manager
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md border">
+          <motion.div
+            className="bg-white p-6 rounded-lg shadow-md border"
+            variants={{
+              initial: {
+                opacity: 0,
+                scale: 0,
+              },
+              final: {
+                opacity: 1,
+                scale: 1,
+              },
+            }}
+            initial={"initial"}
+            whileInView={"final"}
+            transition={{ ease: "easeOut", duration: 1 }}
+            viewport={{ once: true, amount: 1 }}
+          >
             <div className="flex justify-center">
               <img
                 src="/assets/Customer/Customer-3.jpg"
@@ -79,7 +128,7 @@ function SocialProof() {
             <p className="text-blue-600 font-semibold mt-2 text-xs">
               - Alex T., Founder
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {/* Video testimonial */}
